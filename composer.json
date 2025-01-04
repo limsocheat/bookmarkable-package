@@ -1,0 +1,35 @@
+{
+    "name": "limsocheat/bookmarkable-module",
+    "description": "The bookmarkable module for Sakal ERP.",
+    "type": "laravel-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lim Socheat",
+            "email": "limsocheat111@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+   "autoload": {
+        "psr-4": {
+            "Packages\\Bookmarkable\\": "app/",
+            "Packages\\Bookmarkable\\Database\\Factories\\": "database/factories/",
+            "Packages\\Bookmarkable\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Packages\\Bookmarkable\\Tests\\": "tests/"
+        }
+    }
+}
