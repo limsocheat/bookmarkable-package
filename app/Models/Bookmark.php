@@ -4,7 +4,7 @@ namespace Packages\Bookmarkable\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-// use Modules\Bookmarkable\Database\Factories\BookmarkFactory;
+use Packages\Bookmarkable\Database\Factories\BookmarkFactory;
 
 class Bookmark extends Model
 {
@@ -13,10 +13,15 @@ class Bookmark extends Model
     /**
      * The attributes that are mass assignable.
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'user_id',
+        'user_type',
+        'bookmarkable_id',
+        'bookmarkable_type',
+    ];
 
-    // protected static function newFactory(): BookmarkFactory
-    // {
-    //     // return BookmarkFactory::new();
-    // }
+    protected static function newFactory(): BookmarkFactory
+    {
+        return BookmarkFactory::new();
+    }
 }
